@@ -1,0 +1,59 @@
+[
+  {
+    "bookSourceComment": "",
+    "bookSourceGroup": "网源",
+    "bookSourceName": "艾途小说",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://m.aitbooks.com",
+    "bookUrlPattern": "https?://m.aitbooks.com/\\d+.html",
+    "customOrder": 14,
+    "enabled": true,
+    "enabledCookieJar": false,
+    "enabledExplore": true,
+    "exploreUrl": "[\n{\n\t\"title\":\"全部小说\",\n\t\"url\":\"/shuku/0_0_0_0_{{page}}_0_0.html\",\n\t\"style\":{\"layout_flexBasisPercent\":1,\n\t\"layout_flexGrow\":1\n\t}\n\t},\n{\n\t\"title\":\"玄幻小说\",\n\t\"url\":\"/shuku/0_0_0_0_{{page}}_5_0.html\",\n\t\"style\":{\"layout_flexBasisPercent\":0.4,\n\t\"layout_flexGrow\":1\n\t}\n\t},\n{\n\t\"title\":\"虚拟网游\",\n\t\"url\":\"/shuku/0_0_0_0_{{page}}_6_0.html\",\n\t\"style\":{\"layout_flexBasisPercent\":0.4,\n\t\"layout_flexGrow\":1\n\t}\n\t},\n{\n\t\"title\":\"架空历史\",\n\t\"url\":\"/shuku/0_0_0_0_{{page}}_7_0.html\",\n\t\"style\":{\"layout_flexBasisPercent\":0.4,\n\t\"layout_flexGrow\":1\n\t}\n\t},\n{\n\t\"title\":\"科幻空间\",\n\t\"url\":\"/shuku/0_0_0_0_{{page}}_8_0.html\",\n\t\"style\":{\"layout_flexBasisPercent\":0.4,\n\t\"layout_flexGrow\":1\n\t}\n\t},\n{\n\t\"title\":\"都市小说\",\n\t\"url\":\"/shuku/0_0_0_0_{{page}}_9_0.html\",\n\t\"style\":{\"layout_flexBasisPercent\":0.4,\n\t\"layout_flexGrow\":1\n\t}\n\t},\n{\n\t\"title\":\"惊悚小说\",\n\t\"url\":\"/shuku/0_0_0_0_{{page}}_10_0.html\",\n\t\"style\":{\"layout_flexBasisPercent\":0.4,\n\t\"layout_flexGrow\":1\n\t}\n\t},\n{\n\t\"title\":\"同人衍生\",\n\t\"url\":\"/shuku/0_0_0_0_{{page}}_11_0.html\",\n\t\"style\":{\"layout_flexBasisPercent\":0.4,\n\t\"layout_flexGrow\":1\n\t}\n\t},\n{\n\t\"title\":\"穿越架空\",\n\t\"url\":\"/shuku/0_0_0_0_{{page}}_12_0.html\",\n\t\"style\":{\"layout_flexBasisPercent\":0.4,\n\t\"layout_flexGrow\":1\n\t}\n\t}\n]",
+    "lastUpdateTime": 1657348536506,
+    "loginUrl": "https://m.aitbooks.com/user/",
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "class.author@a@text",
+      "coverUrl": "@js:'https://c-ssl.dtstatic.com/uploads/blog/202107/13/20210713194143_741cb.thumb.1000_0.jpg'",
+      "init": "",
+      "intro": "id.intro@div[0]@text##声 明：.*",
+      "kind": "class.isover@span@text&&class.channel@span@text",
+      "lastChapter": "class.row[0]@a.0@text",
+      "name": "class.title@text",
+      "tocUrl": "class.text-center@a.0@href"
+    },
+    "ruleContent": {
+      "content": "<js>\nurl=\"https:\"+result.match(/initTxt\\(\"([^\"]+)\",\"[^\"]+\"\\)/)[1];\nr=String(java.ajax(url).match(/_txt_call\\(([\\s\\S]+\\})\\)/)[1]);\nvar r = eval('(' + r + ')');\n\t\t\t\tif(r.content!=null){\t\t\t\t\n      var e = r.replace;\n\t\t\t\tfor (var n in e) {\n\t\t\t\t\tvar i = new RegExp(e[n], \"ig\");\n\t\t\t\t\tr.content = r.content.replace(i, n)\n\t\t\t\t}\n\t\t\t\tresult=r.content\n\t\t\t\t\t}else{result=\"章节加载失败，或者内容正在手打中，请【收藏本站】稍访问或者联系管理员更新~\"}\n</js>",
+      "nextContentUrl": "class.next@href@js:\nif(result[0].match(/\\/xiaoshuo\\/.*?\\/\\d+.html?page=\\d+/)){\n\tresult=result\n}else{\n\tresult=\"\"\n}"
+    },
+    "ruleExplore": {
+      "author": "class.gray@text##\\/\\s",
+      "bookList": "class.list-item",
+      "bookUrl": "class.item-text@href",
+      "coverUrl": "@js:'https://c-ssl.dtstatic.com/uploads/blog/202107/13/20210713194143_741cb.thumb.1000_0.jpg'",
+      "kind": "tag.p.1@text##T##,",
+      "lastChapter": "tag.p.2@text##.*\\/\\s",
+      "name": "tag.p.0@ownText"
+    },
+    "ruleSearch": {
+      "author": "class.green@text",
+      "bookList": "class.search-card",
+      "bookUrl": "tag.a.-2@href",
+      "coverUrl": "@js:'https://c-ssl.dtstatic.com/uploads/blog/202107/13/20210713194143_741cb.thumb.1000_0.jpg'",
+      "intro": "class.sc-content@text",
+      "kind": "class.gray@text##\\[|\\]",
+      "lastChapter": "class.sc-time@span.0@text",
+      "name": "class.sc-title@a.0@text"
+    },
+    "ruleToc": {
+      "chapterList": "class.BGsectionThree-content@tag.li",
+      "chapterName": "tag.a@text",
+      "chapterUrl": "tag.a@href",
+      "nextTocUrl": "text.下页@href"
+    },
+    "searchUrl": "https://m.aitbooks.com/search/,{\n\t\"charset\": \"UTF-8\",\n\t\"method\": \"POST\",\n\t\"body\": \"keyword={{key}}&submit=\"\n}",
+    "weight": 0
+  }
+]
